@@ -40,4 +40,5 @@ int main(){
         graphL[v1].push_back(v2);   //무방향그래프
         graphL[v2].push_back(v1);
     }
+    dfs_list(s);
 }
