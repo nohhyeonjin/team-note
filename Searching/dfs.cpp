@@ -6,20 +6,20 @@ int v,e,s;  //vertex수, edge수, start vertex
 //인접행렬ver
 int graphM[MAX][MAX];
 int visitedM[MAX];
-void dfs_matrix(int v){
-    visitedM[v]=1;
+void dfs_matrix(int x){
+    visitedM[x]=1;
     for(int i=1;i<=v;i++){
-        if(graphM[v][i]==1&&visitedM[i]==0) dfs_matrix(i);
+        if(graphM[x][i]==1&&visitedM[i]==0) dfs_matrix(i);
     }
 }
 
 //인접리스트ver
 vector<int> graphL[MAX];
 int visitedL[MAX];
-void dfs_list(int v){
-    visitedL[v]=1;
-    for(int i=0;i<graphL[v].size();i++){
-        if(visitedL[graphL[v][i]]==0) dfs_list(graphL[v][i]);
+void dfs_list(int x){
+    visitedL[x]=1;
+    for(int i=0;i<graphL[x].size();i++){
+        if(visitedL[graphL[x][i]]==0) dfs_list(graphL[x][i]);
     }
 }
 int main(){
