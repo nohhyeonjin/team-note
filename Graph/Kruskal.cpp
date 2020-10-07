@@ -1,7 +1,9 @@
+//사이클이 존재하지 않고 가장 적은 비용으로 모든 노드를 연결한 트리
 #include <bits/stdc++.h>
+#define MAX 101
 using namespace std;
 int v,e;
-int parent[101];
+int parent[MAX];
 int result;
 vector<pair<int,pair<int,int>>> edge;   //cost,(start edge,end edge)
 int findParent(int x){
